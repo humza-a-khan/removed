@@ -19,7 +19,7 @@
                 android:id="@+id/authorTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/u/Test"
+                android:text="[test]"
                 android:textColor="#fff"
                 android:textIsSelectable="true" />
 
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/note"
+            android:text="Placeholder body text"
             android:textColor="#fff"
             android:textIsSelectable="true" />
 

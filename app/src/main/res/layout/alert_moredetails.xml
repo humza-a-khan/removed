@@ -218,13 +218,6 @@
             android:id="@+id/md_source_tv"
             android:autoLink="web"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/md_note_tv"
-            android:textStyle="bold"
-            android:text="@string/note" />
-
     </LinearLayout>
 
 </ScrollView>

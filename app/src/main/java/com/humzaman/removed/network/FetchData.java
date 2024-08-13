@@ -19,8 +19,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FetchData {
     private static final String TAG = "FetchData";
-    private String subreddit;
-    private String link_id;
     private String id;
     private static Retrofit pullpushRetrofit;
     private static Retrofit redditRetrofit;
@@ -32,12 +30,7 @@ public class FetchData {
      * Initialize FetchData with the id of the comment to be fetched from PullPush.
      * @param id reddit comment id (do not include t1_ prefix)
      */
-    //public FetchData(String id) {this.id = id;}
-    public FetchData(String id) {
-//        this.subreddit = subreddit;
-//        this.link_id = link_id;
-        this.id = id;
-    }
+    public FetchData(String id) {this.id = id;}
 
     /**
      * Fetch data from PullPush and reddit (for current score) using Retrofit.
@@ -58,10 +51,13 @@ public class FetchData {
                     if (!commentDataList.isEmpty()) {
                         Log.i(TAG, "onResponse: PullPush " + responseP.code());
 
-                        for(int i = 0; i < commentDataList.size(); i++) { // find the right comment
+                        for(int i = 0; i < commentDataList.size(); i++) {
                             if (commentDataList.get(i).getId().equals(id)) {
                                 commentData = commentDataList.get(i);
-                                break;
+                                // sometimes the api returns multiple entries, some without archived data
+                                if (!commentData.getAuthor().equals("[deleted]")) {
+                                    break;
+                                }
                             }
                         }
 

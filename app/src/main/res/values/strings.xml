@@ -12,7 +12,6 @@
     <string name="about">About</string>
     <string name="deleted">[deleted]</string>
 
-    <string name="note">\nNOTE:\nDue to Pushshift\'s nature as an archive tool, information displayed here may not accurately reflect what is currently displayed on reddit.\n<a href="https://www.reddit.com/bcxguf">Click here for more info</a>"</string>
     <string name="author">Author: </string>
     <string name="score">Score: </string>
     <string name="subreddit">Subreddit: </string>

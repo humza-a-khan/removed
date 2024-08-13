@@ -6,8 +6,8 @@ android {
         applicationId "com.humzaman.removed"
         minSdkVersion 22
         targetSdkVersion 34
-        versionCode 19
-        versionName "1.5.8"
+        versionCode 21
+        versionName "1.5.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
